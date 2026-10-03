@@ -1,0 +1,25 @@
+# Environment & Secrets
+.env*
+!.env.example
+*.key
+*.pem
+*token*
+*secret*
+*credential*
+
+# Platform & Tooling caches
+.gemini/
+.gemini-profiles/
+.claude/
+.openclaw/
+__pycache__/
+*.pyc
+
+# Logs & Databases
+*.log
+*.db
+*.sqlite*
+
+# Backup & Temp files
+*.bak*
+*~

@@ -1,0 +1,77 @@
+{
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "agy": {
+        "baseUrl": "http://127.0.0.1:8000/v1",
+        "apiKey": "agy-local",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gemini-3.8-flash-high",
+            "name": "Gemini 3.8 Flash High (Antigravity)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-3.7-flash-high",
+            "name": "Gemini 3.7 Flash High (Antigravity)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "claude-sonnet-4-6",
+            "name": "Claude Sonnet 4.6 (Antigravity)",
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gpt-oss-120b-medium",
+            "name": "GPT-OSS 120B (Antigravity)",
+            "contextWindow": 128000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "agy-default",
+            "name": "Antigravity Default",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-3.8-flash-high@agy1",
+            "name": "Gemini 3.8 Flash High (Worker 1 - Primary)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-3.8-flash-high@agy2",
+            "name": "Gemini 3.8 Flash High (Worker 2)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-3.8-flash-high@agy3",
+            "name": "Gemini 3.8 Flash High (Worker 3)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-3.8-flash-high@agy4",
+            "name": "Gemini 3.8 Flash High (Worker 4)",
+            "contextWindow": 1000000,
+            "maxTokens": 64000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "models": {
+        "agy/gemini-3.8-flash-high": {
+          "alias": "agy"
+        }
+      }
+    }
+  }
+}

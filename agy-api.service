@@ -1,0 +1,19 @@
+[Unit]
+Description=Antigravity (AGY) CLI to OpenAI API Bridge for OpenClaw
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/droidian/Projects/agy-openclaw-bridge
+ExecStart=/usr/bin/python3 /home/droidian/Projects/agy-openclaw-bridge/server.py
+Restart=always
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+Environment=AGY_API_HOST=127.0.0.1
+Environment=AGY_API_PORT=8000
+Environment=AGY_DEFAULT_MODEL=gemini-3.8-flash-high
+Environment=AGY_CONVERSATION_MODE=ephemeral
+Environment=AGY_CLEANUP_EPHEMERAL=true
+
+[Install]
+WantedBy=default.target
